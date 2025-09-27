@@ -40,6 +40,6 @@ jobs:
       - name: Build package
         run: bun run build
 
-      - run: npm publish --access public
+      - run: bun run ci:publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
